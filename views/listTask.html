@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+<style>
+    
+        table,th,td {
+            border: 1px solid black;
+        }
+    </style>
+<body>
+    <a href="/">Home</a>
+    <a href="/newTask">Add New Task</a>
+    <table id="t01">
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Due Date
+            </th>
+            <th>
+                Description
+            </th>
+        </tr>
+        <% for(let i=0;i<Data.length;i++){ %>
+            <tr>
+                <td>
+                    <%=Data[i].TaskName %>
+                </td>
+                <td>
+                    <%=Data[i].DueDate %>
+                </td>
+                <td>
+                    <%=Data[i].Description %>
+                </td>
+            </tr>
+
+        <%} %>
+    </table>
+</body>
+</html>
